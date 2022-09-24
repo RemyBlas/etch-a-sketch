@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #10004a;
+    background-color: #000000;
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
 
 .buttonContainer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 10px;
     gap: 15px;
@@ -51,5 +51,12 @@ button {
     opacity: 0.2;
     background: #ffffff;
     border: 1px solid #d3d3d3;
-    border-radius: 1px;
+    border-radius: 4px;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 0;
 }
