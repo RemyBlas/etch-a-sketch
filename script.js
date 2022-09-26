@@ -4,6 +4,15 @@
 //Init:
 makeGrid(16);
 
+//Grid selection buttons
+const gridSelectors = document.querySelectorAll('.gridSelector');
+gridSelectors.forEach(btn => {
+    btn.addEventListener('click', () => {
+        let num = Number(btn.id);
+        makeGrid(num);
+    })
+});
+
 //Pencil/eraser switch
 let pencilMode = true
 const pencilButton = document.querySelector('#pencil');
@@ -11,17 +20,8 @@ const eraserButton = document.querySelector('#eraser');
 pencilButton.addEventListener('click', () => {pencilMode = true});
 eraserButton.addEventListener('click', () => {pencilMode = false});
 
-//Grid selection options
-const grid8 = document.querySelector('#grid8'),
-    grid16 = document.querySelector('#grid16'),
-    grid24 = document.querySelector('#grid24'),
-    grid32 = document.querySelector('#grid32'),
-    reset = document.querySelector('#reset');
-
-grid8.addEventListener('click', function() {makeGrid(8)});
-grid16.addEventListener('click', function() {makeGrid(16)});
-grid24.addEventListener('click', function() {makeGrid(24)});
-grid32.addEventListener('click', function() {makeGrid(32)});
+//Reset button
+const reset = document.querySelector('#reset');
 reset.addEventListener('click', resetGrid);
 
 //Grids creation function
